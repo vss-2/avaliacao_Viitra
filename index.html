@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Viitra</title>
+    </head>
+    <body>
+        <div class="topLogo">
+            <img src='logo-viitra.png' class='logo'>
+        </div>
+
+        <div><br></div>
+
+        <div>
+            <textarea id="tweet" placeholder="" class='inputTexto'></textarea>
+        </div>
+
+        <div><br></div>
+
+        <button onclick="enviarTweet">Enviar</button>
+
+        <script type="text/javascript">
+            function enviarTweet(){
+                var texto = document.getElementById("tweet").textContent;
+                if (texto.length() == 0){
+                    alert("Não é possível postar mensagem vazia");
+                } else {
+                    // Chamar postman
+                    let ano = getYear()
+                    let mes = getMonth()
+                    let dia = getDate()
+                    let hora = getHour()
+                    let min = getMinute()
+                    console.log(data);
+                    var json = JSON.stringify(texto);
+                    let sql = "INSERT *  "
+                }
+            }
+        </script>
+
+
+        <div><br></div>
+        <div class="outputTexto">
+        </div>
+
+    </body>
+</html>
+
+<!--
+    Comandos Postgree:
+
+    CREATE TABLE tweets (
+        ID serial PRIMARY KEY,
+        url VARCHAR (255) NOT NULL,
+        hora SMALLINT,
+        min SMALLINT,
+        datadia SMALLINT,
+        mes SMALLINT,
+        ano SMALLINT
+    );
+
+    INSERT INTO tweets (texto, hora, min, diadata, mes, ano)
+    VALUES ($texto, $hora, $min, $diadata, $mes, $ano);
+
+
+-->
