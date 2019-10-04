@@ -56,7 +56,7 @@
     Comandos Postgree:
 
     CREATE TABLE tweets (
-        ID serial PRIMARY KEY,
+        id SERIAL PRIMARY KEY,
         url VARCHAR (255) NOT NULL,
         hora SMALLINT,
         min SMALLINT,
@@ -65,8 +65,14 @@
         ano SMALLINT
     );
 
-    INSERT INTO tweets (texto, hora, min, diadata, mes, ano)
+
+    // Inserir novo tweet
+    INSERT INTO tweets (id, texto, hora, min, diadata, mes, ano)
     VALUES ($texto, $hora, $min, $diadata, $mes, $ano);
 
+    // Remover tweet selecionado
+    DELETE FROM tweets (id)
+    WHERE tweets.id = (SELECT id FROM tweets.id)
 
+    
 -->
