@@ -1,0 +1,15 @@
+{
+  "name": "viitra",
+  "version": "0.0.1",
+  "description": "Mini twitter",
+  "main": "app.js",
+  "scripts": {
+    "start": "npm run open",
+    "open": "Iniciando servidor em: \"http-server -a localhost -p 3000\" \"open http://localhost:3000/build\""
+  },
+  "author": "Vitor Sousa",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  }
+}
