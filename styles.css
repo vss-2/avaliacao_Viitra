@@ -1,0 +1,41 @@
+html{
+    background-color: #f0f0f0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    padding-left: 20em;
+    padding-top: 5em;
+}
+
+button {
+    color: black;
+    border-color: #A6DF92;
+    background-color: #A6DF92;
+    border-radius: 20px;
+    margin-left: 46.5em;
+}
+
+.topLogo {
+    padding-bottom: 20x;
+}
+
+.logo {
+    height: 2.2em;
+    width: 8em;
+}
+
+.inputTexto {
+    border-radius: 5px;
+    width: 50em;
+    box-shadow: 2px 2px #cec5c5;
+    border-color: #cec5c5;
+}
+
+.outputTexto {
+    border-radius: 5px;
+    height: 5em;
+    width: 42em;
+    box-shadow: 2px 2px #cec5c5;
+    background-color: #ffffff;
+}
